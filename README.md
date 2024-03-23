@@ -13,9 +13,8 @@
 
 该图可以将各国的油管用户数对应到世界地图上，鼠标悬停即显示国家名称和对应用户数；根据用户数可将国家分为5个梯队，颜色越深色调越暖代表用户规模越大。可以直观明了地观察到油管用户在全世界各国的分布。
 
-[作业1链接]
-(https://joychen28.github.io/geo-2022China_employment.html)
-(https://joychen28.github.io/Map-2024YouTube_user_top20.html)
+[作业1链接1](https://joychen28.github.io/geo-2022China_employment.html)
+[作业1链接2](https://joychen28.github.io/Map-2024YouTube_user_top20.html)
 
 ## 2. 作业2
 随着互联网的普及和发展，世界各国的上网率在不断升高，为了解阿拉伯国家的互联网普及率和网民情况，从[DATAREPORTAL](https://datareportal.com/)收集了2022年阿拉伯国家的互联网用户数、普及率、社交媒体活跃用户数、Facebook渗透率，以及普及率最高的沙特和阿联酋两国的人口结构，最后利用pycharts的组合图表功能将结果可视化。
