@@ -43,4 +43,5 @@
 图3（News Count by Year）以柱状图呈现了各年份新闻报道的篇幅数变化。利用count函数计算各年份的出现次数，从而生成不同年份新闻报道篇幅的柱状图。由此可以看出人工智能热度的时间变化趋势。
 
 图4（News Count by Location）以bar+timeline的形式呈现了不同国家和地区报道人工智能相关新闻的篇幅，同样是利用counts函数对地点进行统计，但不涉及分词和停用词过滤。由此可以清晰看出各个国家和地区对人工智能的关注度。
+
 [作业3链接](https://joychen28.github.io/ALARABIYA_AI_News.html)
