@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Arabiya新闻网站介绍与分析</title>
+    <style>
+        /* 样式代码 */
+        body {
+            position: relative;
+            margin: 40px;
+            padding: 0;
+            background-image: url('C:\\Users\\JoyChen\\Desktop\\大四下\\计算机编程\\07_第七讲_网页设计\\QWc9.gif');
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #fff;
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        header {
+            background-color: rgba(51, 51, 51, 0.7);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        section {
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            animation: slideIn 1s ease-out;
+            text-align: center; /* 居中对齐 */
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        footer {
+            background-color: rgba(51, 51, 51, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        iframe {
+            width: 80%; /* 更改 iframe 宽度 */
+            height: 600px;
+            border: none;
+            margin: 0 auto; /* 水平居中 */
+            display: block; /* 避免内联元素出现问题 */
+        }
+        .search-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input[type=text] {
+            padding: 10px;
+            width: 50%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type=submit] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type=submit]:hover {
+            background-color: #0056b3;
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #007bff; /* 更改标题颜色 */
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        /* 左下角固定位置 */
+        .fixed-gif {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 9999; /* 确保位于其他内容之上 */
+            animation: floatGif 3s infinite; /* 添加动画效果 */
+        }
+        @keyframes floatGif {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Al Arabiya人工智能报道的分析</h1>
+    </header>
+    <section>
+        <h2>Al Arabiya新闻网站介绍</h2>
+        <p>阿拉伯卫星电视台，或音译为“阿拉比亚电视台”，是一家沙特阿拉伯所有的泛阿拉伯主义电视新闻频道，使用阿拉伯语报道。2003年3月3日开始运营。总部位于阿联酋迪拜。最大产权主为沙特阿拉伯的中东广播中心。该台播出新闻、目前事件、商业和财经市场、体育、谈话节目和记录片等节目。其收视率在中东国家的观众中位居前列。</p>
+        <p>访问Al Arabiya网站：<a href="https://www.alarabiya.net/" style="color: #007bff; text-decoration: underline;">https://www.alarabiya.net/</a></p>
+    </section>
+    <section>
+        <h2>更多信息请检索</h2>
+        <div class="search-container">
+            <form action="https://www.baidu.com/s" method="get" target="_blank">
+                <input type="text" placeholder="输入关键词搜索" name="wd">
+                <input type="submit" value="搜索">
+            </form>
+        </div>
+    </section>
+    <section>
+        <h2>人工智能报道分析</h2>
+        <p>近几年人工智能飞速发展，美国和中国是投资人工智能技术规模最大的两个国家，但在阿拉伯地区，人工智能的发展也在兴起，尤其是资金雄厚的海湾国家，以沙特和阿联酋为代表，正如火如荼进行”世界第四次经济革命”。</p>
+        <p>为了解阿拉伯社会对人工智能的看法和关注话题，我利用网络爬虫技术（ParseHub）爬取了沙特国有国际新闻频道Al Arabiya网站的相关报道，以“االذكاء الاصطناعي”（人工智能）为检索词共爬取报道2600+篇，包括标题、时间、地点和新闻文本，以段落为单位共收集2.7w+文本数，时间从2013年2月到2024年3月。</p>
+        <p>图1（worldcloud）生成了2.7w篇幅中词频前100的单词。 在统计词频时，首先加载阿拉伯语停用词词表（github），并手动加入阿拉伯语特殊符号进行文本预处理，在此基础上对文本进行分词并遍历统计。</p>
+        <p>图2（timeline）在图1的基础上进行了报道年份的分组，并加上时间线统计了2013-2024各个年份新闻报道中的前十高频词，以柱状图呈现，且有多个横轴标签，由此可以观察出各年份对人工智能关注领域的异同。</p>
+        <p>图3（News Count by Year）以柱状图呈现了各年份新闻报道的篇幅数变化。利用count函数计算各年份的出现次数，从而生成不同年份新闻报道篇幅的柱状图。由此可以看出人工智能热度的时间变化趋势。</p>
+        <p>图3（News Count by Year）以柱状图呈现了各年份新闻报道的篇幅数变化。利用count函数计算各年份的出现次数，从而生成不同年份新闻报道篇幅的柱状图。由此可以看出人工智能热度的时间变化趋势。</p>
+        <iframe src="https://joychen28.github.io/ALARABIYA_AI_News.html"></iframe>
+    </section>
+    <section style="background-color: rgba(0, 0, 0, 0.7);">
+        <h2>人工智能报道名词共现关系图</h2>
+        <p>在我的研究中，我还创建了一张名词共现关系图，展示了人工智能领域的相关概念之间的关联。</p>
+        <iframe src="C:\Users\JoyChen\Desktop\大四下\计算机编程\05_第五讲_人物共现分析\第3节-pyecharts关系图\output\关系图-分类-三国人物.html"></iframe>
+    </section>
+    <footer>
+        <p>&copy; 2024 Joychen</p>
+    </footer>
+    <!-- 左下角固定 GIF 图片 -->
+    <img src="C:\Users\JoyChen\Desktop\大四下\计算机编程\07_第七讲_网页设计\3q63.gif" class="fixed-gif">
+</body>
+</html>
